@@ -51,7 +51,7 @@ When("click on Archive this list option to delete list", ()=> {
 
 Then("The List will be deleted successfully",()=>{
     cy.wait(2000);
-    deleteListAssertion.CheckDeleteListNotContainValue()
+    deleteListAssertion.CheckDeleteListNotContainValue(ListName)
  
 
 })

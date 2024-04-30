@@ -26,13 +26,17 @@
 
 Cypress.Commands.add("loginToTrello",()=>{
     cy.visit("/login");
-    cy.get("#user").type("maysawwad99@gmail.com");
-    cy.get("#login").click();
-    cy.origin("https://id.atlassian.com",()=>{
-        cy.get("#password").type("MaysAwwad!20." +"{enter}");
-    })
-})
+    cy.get("#username").type("maysawwad99@gmail.com");
+    cy.get("#login-submit").click();
+    //cy.origin("https://id.atlassian.com",()=>{
+    cy.get("#password").type("MaysAwwad!20." +"{enter}");
 
-Cypress.Commands.add("findByTestId", (testId)=>{
-       cy.get(`[data-testid=${testId}]`); 
+    })
+
+Cypress.Commands.add("findByTestId",(testId)=>{
+        //cy.get(`[data-testid=${testId}]`);
+       // cy.wait(2000);
+        //cy.origin("https://trello.com", { args:{testId} }, ({testId}) => {
+        cy.get(`[data-testid=${testId}]`);      
+    //})
 })
