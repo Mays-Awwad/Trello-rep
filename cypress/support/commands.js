@@ -34,9 +34,6 @@ Cypress.Commands.add("loginToTrello",()=>{
     })
 
 Cypress.Commands.add("findByTestId",(testId)=>{
-        //cy.get(`[data-testid=${testId}]`);
-       // cy.wait(2000);
-        //cy.origin("https://trello.com", { args:{testId} }, ({testId}) => {
         cy.get(`[data-testid=${testId}]`);      
-    //})
+
 })

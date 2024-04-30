@@ -16,7 +16,7 @@ describe("Https Requests And Responses",()=> {
         //PUT method
         cy.request("PUT","https://reqres.in/api/users/2",{"job":"leader"}).then((resp)=> {
             cy.log(resp);
-            expect(resp.status).to.eq(200)
+            expect(resp.status).to.eq(200);
         })
     })
 })
